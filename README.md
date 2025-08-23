@@ -13,4 +13,4 @@ The Gondola Elevator is a 3-station belt-driven gondola system controlled by an 
 
 ---
 ### 🖼️ Block Diagram  
-<img width="1176" height="827" alt="image" src="https://github.com/user-attachments/assets/b093aac9-c33b-4051-8f38-6164a3eb863d" />
+<img width="800" height="400" alt="image" src="https://github.com/user-attachments/assets/b093aac9-c33b-4051-8f38-6164a3eb863d" />
