@@ -94,4 +94,4 @@ The main functionality is split across initialization routines and interrupt-dri
   - Problem: Motor wasn’t receiving enough voltage/current through the driver.  
   - Solution: Rechecked wiring and added an external power supply (>5V) to the motor driver.
 
-
+note: the project was submitted on august 20th 2024
