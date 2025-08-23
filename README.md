@@ -1,5 +1,16 @@
-- 🚡 **Gondola Elevator Project** – Designed a 3-station gondola system with automatic station detection and motor control.  
-  - Controlled entirely with an **EFM32 Wonder Gecko**  
-  - Motor drives the **railing (belt system)** for gondola movement  
-  - Used IR sensors for station detection and PWM for speed control  
-  - 📺 [Watch Demo](https://www.youtube.com/watch?v=ePwcX9OrQtQ&list=PPSV)
+# 🚡 Gondola Elevator Project  
+
+## 📖 Project Overview  
+The Gondola Elevator is a 3-station belt-driven gondola system controlled by an **EFM32 Wonder Gecko** microcontroller.  
+
+- Movement driven by DC motor with PWM speed regulation  
+- IR sensors for automatic station detection  
+- LCD display for station number and travel direction  
+- Push buttons for selecting movement direction  
+- Stops automatically at each station and waits for input before continuing  
+
+📺 [Watch Demo](https://youtu.be/D1nqjeeeRMU)  
+
+---
+### 🖼️ Block Diagram  
+<img width="1176" height="827" alt="image" src="https://github.com/user-attachments/assets/b093aac9-c33b-4051-8f38-6164a3eb863d" />
