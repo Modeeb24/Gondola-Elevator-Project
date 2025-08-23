@@ -11,6 +11,10 @@ The Gondola Elevator is a 3-station belt-driven gondola system controlled by an 
 
 📺 [Full demo](https://www.youtube.com/watch?v=ePwcX9OrQtQ)  
 
+👥 Team Members:  
+- Mohamad Deeb ( GitHub: [modeeb24](https://github.com/modeeb24) | linkedin: [modeeb24](https://www.linkedin.com/in/modeeb24/) | Email: mohamad.de24@gmail.com )  
+- Nikita Krasik  ( Email: mazdmitryofficial@gmail.com )
+- Dimitri Maziarkin ( Email: nikotin824@gmail.com )  
 ---
 ## 🖼️ Block Diagram  
 <img width="800" height="400" alt="image" src="https://github.com/user-attachments/assets/b093aac9-c33b-4051-8f38-6164a3eb863d" />
