@@ -1,6 +1,6 @@
 # 🚡 Gondola Elevator Project  
 
-## 📖 Project Overview  
+##  Project Overview  
 The Gondola Elevator is a 3-station belt-driven gondola system controlled by an **EFM32 Wonder Gecko** microcontroller.  
 
 - Movement driven by DC motor with PWM speed regulation  
@@ -9,20 +9,20 @@ The Gondola Elevator is a 3-station belt-driven gondola system controlled by an 
 - Push buttons for selecting movement direction  
 - Stops automatically at each station and waits for input before continuing  
 
-📺 [Full demo](https://www.youtube.com/watch?v=ePwcX9OrQtQ)  
+ [Full demo](https://www.youtube.com/watch?v=ePwcX9OrQtQ)  
 
-👥 Team Members:  
-- Mohamad Deeb ( GitHub: [modeeb24](https://github.com/modeeb24) | linkedin: [modeeb24](https://www.linkedin.com/in/modeeb24/) | Email: mohamad.de24@gmail.com )  
+ Team Members:  
+- Mohamad Deeb ( linkedin: [modeeb24](https://www.linkedin.com/in/modeeb24/) | Email: mohamad.de24@gmail.com )  
 - Nikita Krasik  ( Email: mazdmitryofficial@gmail.com )
 - Dimitri Maziarkin ( Email: nikotin824@gmail.com )  
 ---
-## 🖼️ Block Diagram  
+##  Block Diagram  
 <img width="800" height="400" alt="image" src="https://github.com/user-attachments/assets/b093aac9-c33b-4051-8f38-6164a3eb863d" />
 
-## 📊 Flowchart
+##  Flowchart
 <img width="309" height="897" alt="image" src="https://github.com/user-attachments/assets/d80be370-c116-45cf-8542-e36823fa67ad" />
 
-## ⚙️ System Resource Allocation  
+##  System Resource Allocation  
 
 - **GPIO Even Interrupt** – Handles IR sensor inputs for station detection  
 - **TIMER0** – Generates 38 kHz IR emitter signal for gondola guidance  
@@ -30,24 +30,24 @@ The Gondola Elevator is a 3-station belt-driven gondola system controlled by an 
 - **LCD Screen** – Displays station number and travel direction arrows  
 - **Push Buttons** – Select direction (left/right) when gondola is at a station
 
-## 💻 Code Explanation  
+##  Code Explanation  
 
 The project is written in C for the **EFM32 Wonder Gecko** using **emlib** drivers.  
 The main functionality is split across initialization routines and interrupt-driven control.  
 
-### 🔹 Initialization Functions  
+###  Initialization Functions  
 - **`gpio_init()`** – Configures all GPIO pins (IR sensors, buttons, motor control, PWM, LCD).  
 - **`initTIMER0()`** – Sets up a 38 kHz signal for the IR emitter using a timer interrupt.  
 - **`initTIMER1()`** – Configures PWM for the DC motor; duty cycle can be updated to control speed.  
 - **`initLCD()`** – Initializes the onboard LCD to display station numbers and direction arrows.  
 - **`initExternalInterrupt()`** – Enables external interrupts for IR sensor inputs.  
 
-### 🔹 Core Control Functions  
+###  Core Control Functions  
 - **`move_fwd()` / `move_bck()`** – Sets GPIO outputs to control gondola movement direction.  
 - **`stop()`** – Clears motor control signals, stopping the gondola.  
 - **`setPWMDutyCycle()`** – Updates motor speed by changing the PWM duty cycle.  
 
-### 🔹 Interrupt Handlers  
+###  Interrupt Handlers  
 - **`TIMER0_IRQHandler()`** – Toggles the IR emitter output to maintain a 38 kHz signal.  
 - **`GPIO_EVEN_IRQHandler()`** – Handles IR sensor triggers:  
   - Slows gondola near station (35% duty cycle).  
@@ -55,7 +55,7 @@ The main functionality is split across initialization routines and interrupt-dri
   - Waits for button input (left/right).  
   - Resumes travel at normal speed (75% duty cycle).  
 
-### 🔹 Program Flow  
+###  Program Flow  
 1. System initializes peripherals (GPIO, timers, LCD).  
 2. Motor starts moving gondola forward.  
 3. On station detection → gondola slows down, stops, and shows station number.  
@@ -63,7 +63,7 @@ The main functionality is split across initialization routines and interrupt-dri
 5. Travels in selected direction until the next station.  
 
 
-## 📸 Results – Oscilloscope Measurements  
+##  Results – Oscilloscope Measurements  
 
 **PWM Signals**  
 - 35% duty cycle – used when slowing down near a station  
@@ -80,7 +80,7 @@ The main functionality is split across initialization routines and interrupt-dri
 
 <img width="1500" height="417" alt="38 kHz IR Signal" src="https://github.com/user-attachments/assets/b490f219-1e6e-4167-ab8d-49d002fceb66" />
 
-## 🧪 Challenges & Solutions  
+##  Challenges & Solutions  
 
 - **IR Sensor Input Issue**  
   - Problem: IR receiver wasn’t detecting signals reliably.  
